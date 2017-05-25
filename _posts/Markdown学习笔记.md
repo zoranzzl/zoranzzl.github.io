@@ -1,8 +1,7 @@
 ---
-- layout: post
-- title: MarkDown学习笔记
-- author: zoranzzl
-
+layout: post
+title: MarkDown学习笔记
+author: zoranzzl
 ---
 
 前言：搭建个人博客之后，了解到了Markdown,感觉要是写博客这个东西可能很重要，抽时间学习一下，写一点东西记录一下。
