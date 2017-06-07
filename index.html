@@ -1,65 +1,30 @@
 ---
-layout: default_index
+layout: default
 ---
 
-
-
-
-
-
-<div id="main_content">
-
-	<!-- <h1>最新文章</h1> -->
-
-
-
-	<!-- 全部列表一起输出 -->
-
-<!-- 	<ul class="index_list">
-	    {% for post in site.posts %}
-	        <li>
-	        	<a href="{{ site.url }}{{ post.url }}">
-	        		<span>{{ post.title }}</span>	
-	        		<span class="index_list_date"><span> - - - - </span>{{ post.date | date_to_string }}</span>
-	        	</a>	
-	        </li>
-	    {% endfor %}
-	</ul> -->
-
-
-
-
-	<!-- 按年份输出列表 -->
-	<ul class="index_list">
-		{% for post in site.posts %}
-
-
-		   {% unless post.next %}
-		        <h1 class="index_global_year_title">{{ post.date | date: '%Y' }}</h1>
-		   {% else %}
-		        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-		        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-		        {% if year != nyear %}
-		        <h1 class="index_global_year_title">{{ post.date | date: '%Y' }}</h1>
-		        {% endif %}
-		   {% endunless %}
-
-		   <li>
-		        <a href="{{ post.url }}">
-		       		<span>{{ post.title }}</span>
-		       		<!-- <span class="index_list_date"><span> - - - - </span>{{ post.date | date_to_string }}</span> -->
-		       		<span class="index_list_date"><span> - - - - </span>{{ post.date | date:"%m-%d" }} </span>
-		        </a>
-		        <!-- <span class="datetime">{{ post.date | date:"%m-%d" }} </span> -->
-		   </li>
-		{% endfor %}
-	</ul>
-
-</div>
-
-
-
-
-
-
-
+<article class="typo home">
+  <h1>日志</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li data-tags="{{ post.tags | jsonify | cgi_escape}}">
+        <a href="{{ post.url }}">{{ post.title }}</a><small><span>-</span>{{ post.date | date: '%Y年%m月%d日' }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+  <h1>关于我</h1>
+  <p>我目前就职于腾讯，是一名高级前端开发工程师。</p>
+  <h4>链接</h4>
+  <ul>
+    <li><a href="https://github.com/zhaoda" target="_blank">GitHub</a></li>
+    <li><a href="/labs">实验室</a></li>
+    <li><a href="http://t.qq.com/zd6437" target="_blank">腾讯微博</a></li>
+    <li><a href="http://weibo.com/sage" target="_blank">新浪微博</a></li>
+    <li><a href="https://twitter.com/sage6437" target="_blank">Twitter</a></li>
+    <li><a href="https://www.facebook.com/sage6437" target="_blank">Facebook</a></li>
+  </ul>
+  <h4>邮箱</h4>
+  <p>
+    <a href="mailto:zd6437@gmail.com">zd6437@gmail.com</a>
+  </p>
+  {% include ad.html %}
+</article>
