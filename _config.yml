@@ -1,81 +1,94 @@
-﻿#
-# This file contains configuration flags to customize your site
-#
+# User Settings | Edit there as per required
 
-# Name of your site (displayed in the header)
-name: Zoran的个人博客
+title: accent
+url: "http://ankitsultana.com"
+baseurl: "/accent"
 
-# Short bio or description (displayed in the header)
-description: 咸鱼翻身？不存在的......
+# This will show up at the top of index page
+site_heading: >
+    foo <span class="faded">'s blog</span>
 
+email: your@email.com
+author: yourname
+# This description will show up in google search results
+# (for index page) etc.
+description: >
+    accent is, as Trump would put it, the best
 
-#
-# Flags below are optional
-#
+# This will what will show against &copy; in the footer
+copyright: accent
+# Toggle your short bio, which will displayed on your index page
+# Just toggle it and run jekyll again to see
+intro: false         # Tip: Remove the span from site_heading if intro is set to true
+# This will be displayed in your intro
+short_bio: >
+    Welcome! This is <span>accent</span>, a mobile friendly theme for Jekyll. The main feature of this
+    theme is that you can change the accent color. Refer the
+    <a class="underline different-highlight" href="http://ankitsultana.com/accent/documentation.html">
+        Documentation
+    </a>
+    to know how.
 
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email: zoranzhang@outlook.com/
-  facebook:
-  flickr:
-  github: https://github.com/zoranzzl
-  instagram:
-  linkedin: akshay-agarwal-782018a4
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: 
-  stackoverflow: # your stackoverflow profile, e.g. "users/3807565/akshay"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+permalink: /:title.html
 
+# Comments are powered by disqus
+comments: true
 
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus:
+# keep about_stub roughly 12 words long for best results
+# This will show up at the bottom of each post
+# Note that about_footer should be true if you want
+# to see author information at the bottom of each post
+about_stub: >
+    Keep this sentence less than 13 words or it won't look good.
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+about_footer: true
 
-# Your website URL (e.g. http://akshayagarwal007.github.io)
-# Used for Sitemap.xml and your RSS feed
-url: https://github.com/zoranzzl.github.io
+twitter_username: AnkitSultana
+github_username: yourgithub
+facebook_id: yourusername
 
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
+favicon: true
+favicon_location: "images/favicon.ico"
 
-#
-# !! You don't need to change any of the configuration flags below !!
-#
+profile_picture: images/temp.png
+paginate: 5
+paginate_path: "/page/:num"
+tracking_id: UA-69243698-7 # GA Tracking ID
 
-permalink: /:title/
+# Social Stuff | open graph and twitter cards
+og_image: "images/accent.png" # This will show in facebook thumbnails
+twitter_image: "http://ankitsultana.com/images/accent.png?1234" # This will show in twitter cards
 
-# Jekyll 3 now only supports Kramdown for Markdown
-kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+####################################
+####################################
+####################################
+### Build Settings | Don't Touch ###
+####################################
+####################################
+####################################
 
-# Set the Sass partials directory, as we're using @imports
-sass:
-  style: :expanded # You might prefer to minify using :compressed
+markdown: kramdown
 
-# Use the following plug-ins
 gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+    - jekyll-paginate
 
-# Exclude these files from your production _site
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
+sass:
+    style: compressed
+    sass_dir: _sass
+
+# Scopes
+defaults:
+    -
+        scope:
+            path:   ""
+            type:   "pages"
+        values:
+            layout: "page"
+    -
+        scope:
+            path:   ""
+            type:   "posts"
+        values:
+            layout: "post"
+
+exclude: [vendor] # For travis ci
