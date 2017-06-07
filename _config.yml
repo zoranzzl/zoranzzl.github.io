@@ -1,17 +1,17 @@
-# Site settings
-title:            赵达的个人网站 - Zhao Da's Personal Website
-name:             赵达
-email:            zd6437@gmail.com
-description:      我目前就职于腾讯，是一名高级前端开发工程师。
+﻿# Site settings
+title:            Reykjavik
+name:             张智亮
+email:            zoranzhang@outlook.com
+description:      咸鱼翻身？不存在的，翻了身的咸鱼不还是咸鱼？
 baseurl:          ""
-url:              http://zhaoda.net
-twitter_username: sage6437
-github_username:  zhaoda
-github_url:       https://github.com/zhaoda/zhaoda.github.io
+url:              
+twitter_username: 
+github_username:  zoranzzl
+github_url:       https://github.com/zoranzzl/zoranzzl.github.io
 lang:             zh
-timezone:         Asia/Shanghai
-google_verify:    k9Sobn7a9wwRvlG0YV0L8f2wiguGMDSUNaqlgQd46Ro
-google_plus:      113279817760268675586
+timezone:         Asia/Beijing
+google_verify:    
+google_plus:      
 
 # Handling Reading
 safe:         false
