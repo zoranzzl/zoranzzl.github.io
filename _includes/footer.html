@@ -1,17 +1,39 @@
-<div class="footer">
-  <a href="{{ site.url }}">赵达的个人网站</a> &copy; 2009 - {{ site.time | date: '%Y' }} /  
-  <a href="{{ site.github_url }}" target="_blank">Github</a> - 
-  <a href="/feed.xml" target="_blank">RSS</a>
-  <p>
-    本站内容采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
-  </p>
-</div>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?a9787f0ab45d5e237bab522431d0a7ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+<footer>
+    {% include paginate.html %}
+    {% include suggestion.html %}
+    {% if page.url == "/about" or paginator.total_pages == 1 or page.url == "/404" %}
+        <div class="container" style="text-align: center; margin-bottom: 20px">
+            <a target="_blank" class="button" href="https://twitter.com/{{ site.twitter_username }}">
+                Follow me on twitter
+            </a>
+        </div>
+    {% endif %}
+    <hr />
+    <div class="user-footer">
+        <div class="copyright alignable pull-left">
+            {% if site.copyright %}
+                <h2> &copy;{{ site.copyright }}</h2>
+            {% else %}
+                <h2> &copy;{{ site.title }}</h2>
+            {% endif %}
+        </div>
+        <div class="alignable pull-right">
+            <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}" class="button">
+                @{{ site.twitter_username }}
+            </a>
+            <a href="mailto:{{ site.email }}" class="button">
+                mail
+            </a>
+            <a target="_blank" href="{{ site.url }}{{ site.baseurl }}/feed.xml" class="button">
+                rss
+            </a>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <hr />
+    <div class="theme-footer">
+        <p class="alignable pull-left" style="display: inline-block">
+            Built with <a href="http://jekyllrb.com/" class="different-highlight underline">Jekyll</a> and <a href="http://ankitsultana.com/accent/" class="different-highlight underline">accent</a>
+        </p>
+    </div>
+</footer>
