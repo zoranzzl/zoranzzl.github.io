@@ -2,15 +2,14 @@
 title:            Zoran
 description:      The secret of life is not to do what you love, but to try to enjoy what you have to do.
 url:              # http://scribble.muan.co # Site url, without a slash at the end.
-signoff:          "muan" # Your name
-github_username:  zoranzzl
-email:            zoranzhang@outlook.com
+signoff:          Zoran
+
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
 share:            false # Turn on twitter and facebook share buttons
 
 links:
-  - name:         Posts
+  - name:         Blog
     url:          /
     external:     false
   - name:         About me
