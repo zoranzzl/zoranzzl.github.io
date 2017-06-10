@@ -1,19 +1,24 @@
-﻿# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-title: Zoran
-email: zoranzhang@outlook.com
-description: > # this means to ignore newlines until "baseurl:"
-  The secret of life is not to do what you love, but to try to enjoy what you have to do.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-
+# ----------- CONFIGURABLE START -----------
+title:            Zoran
+description:      The secret of life is not to do what you love, but to try to enjoy what you have to do.
+url:              # http://scribble.muan.co # Site url, without a slash at the end.
+signoff:          "muan" # Your name
 github_username:  zoranzzl
-email:  zoranzhang@outlook.com
-# Build settings
-markdown: kramdown
+email:            zoranzhang@outlook.com
+facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
+share:            false # Turn on twitter and facebook share buttons
+
+links:
+  - name:         Posts
+    url:          /
+    external:     false
+  - name:         About me
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
+
+permalink:        /posts/:title
+defaults:
+  - values:
+      layout: "default"
