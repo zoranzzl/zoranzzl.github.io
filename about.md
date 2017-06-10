@@ -1,8 +1,7 @@
 ---
-title: About me
+layout: page
+title: About
+permalink: /about/
 ---
 
-Waiting for update.
-
-
-Find me on [GitHub](https://github.com/zoranzzl).
+Waiting for update...
