@@ -16,4 +16,4 @@ url: "" # the base hostname & protocol for your site
 github_username:  zoranzzl
 email:  zoranzhang@outlook.com
 # Build settings
-markdown: Showdown
+markdown: kramdown
