@@ -1,22 +1,40 @@
-## Jekyll Hilmi V0.1
+# brume
 
-The jekyll hilmi is just another white clean minimalist jekyll theme that focuses on writing matters. 
-Suitable for personal blogs.
+I am not a designer so I cannot impress you with breathtaking Jekyll themes, but brume is something that just came to my mind and I had to build it. It is a clean and simple theme, which has an index page that lists all your blog posts divided by year and an about page.
 
-[Live Demo](http://nix1947.github.io/jekyll-hilmi)
+This is how the "Home" page looks like.
 
-## Installation
-1. Fork this repository to your own Github account and then clone in to your local device.
-2. Move into the repository director `cd site`
-3. Install the dependencies `bundle install` 
-4. Run the setup `jekyll server` or `bundle exec jekyll server`
+![Home](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/home.png)
 
-##Screenshot
+And this is a single post.
 
-<img src="./screenshot.png">
+![Post](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/post_1.png)
 
-## Pull request
-- pull request are welcome.
+![Post. More content examples.](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/post_2.png)
 
-## License
-[MIT](./LICENSE.md)
+## Usage
+
+Brume can be installed just like any other Jekyll theme as described [here](https://jekyllrb.com/docs/themes/#installing-a-theme),
+but there are a couple of additional steps you have to take.
+
+1. All the links are defined in a file *_data/links.yml*, therefore you'll have to create a *_data*
+directory and put this file there in order for navigation to be displayed.
+2. Brume uses `home` layout for the home page (like the default Jekyll theme). All you need to do
+is create an *index.html* or *index.md* file with `layout: home`. If you want the home page to be
+listed in the navigation you have to add `title` to it's front matter that matches
+the title you used for the home page link in the *links.yml* file. Titles are used to indicate
+the current page.
+
+## Theme customization
+
+This theme has 4 predefined colors that can be used for links:
+
+- azul
+- ruby
+- amber
+- avocado
+
+By default it uses *avocado*, but if you want to select another one just change the `color_scheme` setting in
+*_config.yml* file.
+
+Express your thoughts about brume on Twitter [@aigarsdz](http://twitter.com/aigarsdz), and help me make it better!
