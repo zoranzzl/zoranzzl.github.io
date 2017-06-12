@@ -1,19 +1,39 @@
-﻿# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-title: Zoran
+﻿# Site settings
+name: Zoran
 email: zoranzhang@outlook.com
-description: > # this means to ignore newlines until "baseurl:"
-  The secret of life is not to do what you love, but to try to enjoy what you have to do.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+author: 
+url: 
+resume_site: 
+github: https://github.com/zoranzzl
+baseurl: 
+description: Send me to hell!
+meta_description: 咸鱼翻身？不存在的。翻了身的咸鱼不还是咸鱼？
+motto: 
+banner: 
 
-github_username:  zoranzzl
-email:  zoranzhang@outlook.com
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: zoranzzl
+highlighter: Pygments
+
 # Build settings
 markdown: kramdown
+
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+
+FB:
+  comments :
+    provider : 
+    duoshuo:
+        short_name : 
+    disqus :
+        short_name : 
+    # facebook :
+    #   appid : 123
+    #   num_posts: 5
+    #   width: 580
+    #   colorscheme: light
