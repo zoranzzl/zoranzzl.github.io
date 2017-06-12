@@ -1,8 +1,46 @@
-<div class="footer center">
+<footer class="site-footer">
 
-  Built with Jekyll using
-  <a href="https://github.com/kuoa/julia" target="_blank">Julia</a>
-  theme
-  <img src='/assets/logo.png'>
+  <div class="wrapper">
 
-</div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h2 class="footer-heading">{{ site.title }}</h2>
+        </div>
+
+        <div class="column">
+          <ul class="social-media-list">
+            {% if site.github_username %}
+            <li>
+              {% include icon-github.html username=site.github_username %}
+            </li>
+            {% endif %}
+
+            
+			{% if site.twitter_username %}
+            <li>
+              {% include icon-twitter.html username=site.twitter_username %}
+            </li>
+            {% endif %}
+            
+            {% if site.email %}
+            <li>
+              {% include icon-mail.html username=site.email %}
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="row">
+        <div class="column-50">
+          <p>{{ site.description }}</p>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+</footer>

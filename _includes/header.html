@@ -1,16 +1,16 @@
-<div class="site-header">
+<nav class="navigation">
+  <section class="container">
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <i class="fa fa-navicon fa-lg"></i>
-      </a>
+    <a class="navigation-title" href="{{ site.baseurl }}/index.html">
+      <!-- <img class="img" src="img/logo.svg" height="30" alt="Milligram" title="Milligram"> -->
+      <h1 class="title">{{ site.title }}</h1>
+    </a>
 
-      <div class="trigger">
-        {% for link in site.links %}
-          <a class="page-link" target="{% if link.external %}_blank{% else %}_top{% endif %}"
-             href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{link.name}}</a>
-        {% endfor %}
-      </div>
-    </nav>
-
-</div>
+    <ul class="navigation-list float-right">
+      <li class="navigation-item">
+        <a class="navigation-link" href="{{ site.baseurl }}/about" data-popover>About</a>
+      </li>
+    </ul>
+    
+  </section>
+</nav>
